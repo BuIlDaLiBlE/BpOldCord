@@ -1,6 +1,6 @@
 /**
   * @name BpOldCord
-  * @version 1.0.17
+  * @version 1.0.18
   * @author @milbit, @buildalible
   * @source https://github.com/BuIlDaLiBlE/BpOldCord
   * @description A theme based on OldCord that attempts to restore the feel of Discord prior to 2025 Visual Refresh
@@ -20,17 +20,7 @@
 /*@import url("https://milbits.github.io/oldcord/src/components/profile.css");*/
 
 body {
-    --blurple: var(--brand-experiment);
-    --text-brand: var(--blurple);
-    --bg-brand: var(--blurple);
-    --brand-new-500: var(--blurple);
-    --brand-experiment: hsl(227, calc(var(--saturation-factor, 1) * 58%), 65%);
-    --font-display: var(--font-primary);
-    --control-brand-foreground: var(--brand-experiment);
-    /* activity colors*/
-    --background-surface-high: var(--background-secondary);
-    --bg-base-secondary: var(--background-secondary);
-    --bg-base-tertiary: var(--background-tertiary);
+    --blurple: var(--blurple-50);
 }
 
 :root {
