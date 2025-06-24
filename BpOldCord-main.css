@@ -1,6 +1,6 @@
 /**
   * @name BpOldCord
-  * @version 1.0.20
+  * @version 1.0.21
   * @author @milbit, @buildalible
   * @source https://github.com/BuIlDaLiBlE/BpOldCord
   * @description A theme based on OldCord that attempts to restore the feel of Discord prior to 2025 Visual Refresh
@@ -318,5 +318,8 @@ body {
     background-color: color-mix(in oklab,var(--bg-surface-overlay),transparent 10%) !important;
     backdrop-filter: blur(8px) !important;
     box-shadow: var(--shadow-border),var(--shadow-low) !important;
+  }
+  .disconnect_f1ceac {
+    border-radius: 12px !important;
   }
 }
