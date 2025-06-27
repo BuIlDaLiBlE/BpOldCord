@@ -1,6 +1,6 @@
 /**
   * @name BpOldCord
-  * @version 1.0.23
+  * @version 1.0.24
   * @author @milbit, @buildalible
   * @source https://github.com/BuIlDaLiBlE/BpOldCord
   * @description A theme based on OldCord that attempts to restore the feel of Discord prior to 2025 Visual Refresh
@@ -19,12 +19,15 @@
 /*@import url("https://milbits.github.io/oldcord/src/components/oldEmojis.css");*/
 /*@import url("https://milbits.github.io/oldcord/src/components/profile.css");*/
 
-.theme-dark:not(html.custom-theme-background, :has(#clientThemeVars),.theme-darker,.theme-midnight) {
-    --background-primary: hsl(220, calc(var(--saturation-factor, 1) * 8%), 23%);
-    --background-secondary: hsl(223, calc(var(--saturation-factor, 1) * 7%), 20%);
-    --background-secondary-alt: hsl(220, calc(var(--saturation-factor, 1) * 7%), 17%);
+
+.theme-dark:not(html.custom-theme-background, html:has(#clientThemeVars),.theme-darker) {
+    --background-primary: var(--background-base-low);
+    --background-secondary: var(--background-base-lower);
+    --background-secondary-alt: var(--background-base-lowest);
     --background-tertiary: hsl(216, calc(var(--saturation-factor, 1) * 7%), 14%);
-    --background-floating: #18191c;
+    --background-base-low: color-mix(in oklab,var(--neutral-66) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
+    --background-base-lower: color-mix(in oklab,var(--neutral-69) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
+    --background-base-lowest: color-mix(in oklab,var(--neutral-73) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
 }
 
 .theme-light:not(html.custom-theme-background, :has(#clientThemeVars)) {
@@ -335,7 +338,25 @@ body {
   .disconnect_f1ceac {
     border-radius: 12px !important;
   }
-  .container_fea832 {
+  .rtcConnectionStatusConnected__06d62 {
+    color: var(--text-feedback-positive) !important;
+  }
+  .container_fea832, .container_a45028 {
     background-color: var(--input-background) !important;
+  }
+  .header__45690 {
+    background-color: var(--background-surface-high) !important;
+  }
+  .tertiary__06eda, .friendRequestsButton__523aa, .searchBar__35e86 .grow__201d5.fullWidth__201d5.sizeSmall__201d5.colorPrimary__201d5.lookFilled__201d5.button__201d5 {
+    background-color: var(--button-secondary-background) !important;
+  }
+  .section__00943 {
+    background-color: var(--background-mod-subtle) !important;
+  }
+  .wrapper__4e6ce {
+    background-color: var(--background-base-lower) !important;
+  }
+  .barBase__0f481 {
+    height: 32px !important;
   }
 }
