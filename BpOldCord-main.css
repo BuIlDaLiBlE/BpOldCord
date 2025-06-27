@@ -1,6 +1,6 @@
 /**
   * @name BpOldCord
-  * @version 1.0.21
+  * @version 1.0.22
   * @author @milbit, @buildalible
   * @source https://github.com/BuIlDaLiBlE/BpOldCord
   * @description A theme based on OldCord that attempts to restore the feel of Discord prior to 2025 Visual Refresh
@@ -18,6 +18,20 @@
 /*@import url("https://milbits.github.io/oldcord/src/components/oldContent.css");*/
 /*@import url("https://milbits.github.io/oldcord/src/components/oldEmojis.css");*/
 /*@import url("https://milbits.github.io/oldcord/src/components/profile.css");*/
+
+.theme-dark:not(html.custom-theme-background, :has(#clientThemeVars),.theme-darker,.theme-midnight) {
+	--background-secondary: hsl(223, calc(var(--saturation-factor, 1) * 7%), 20%);
+	--background-secondary-alt: hsl(220, calc(var(--saturation-factor, 1) * 7%), 17%);
+	--background-tertiary: hsl(216, calc(var(--saturation-factor, 1) * 7%), 14%);
+}
+
+.theme-light:not(html.custom-theme-background, :has(#clientThemeVars)) {
+	--chat-background-default: #ebedef;
+	--background-modifier-accent: #06060714;
+	--background-mentioned: hsla(38, calc(var(--saturation-factor, 1) * 96%), 54%, 0.1);
+	--background-mentioned-hover: hsla(38, calc(var(--saturation-factor, 1) * 96%), 54%, 0.2);
+	--background-message-hover: rgba(6, 6, 7, 0.02);
+}
 
 body {
     --blurple: var(--blurple-50);
@@ -245,9 +259,6 @@ body {
 }
 
 .visual-refresh {
-  .themedBackground__74017 {
-    background: var(--bg-overlay-floating, var(--chat-background-default));
-  }
   .channelTextArea__74017 {
     border-radius: var(--radius-sm);
   }
