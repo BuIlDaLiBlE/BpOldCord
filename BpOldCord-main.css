@@ -1,6 +1,6 @@
 /**
   * @name BpOldCord
-  * @version 1.0.22
+  * @version 1.0.23
   * @author @milbit, @buildalible
   * @source https://github.com/BuIlDaLiBlE/BpOldCord
   * @description A theme based on OldCord that attempts to restore the feel of Discord prior to 2025 Visual Refresh
@@ -20,17 +20,19 @@
 /*@import url("https://milbits.github.io/oldcord/src/components/profile.css");*/
 
 .theme-dark:not(html.custom-theme-background, :has(#clientThemeVars),.theme-darker,.theme-midnight) {
-	--background-secondary: hsl(223, calc(var(--saturation-factor, 1) * 7%), 20%);
-	--background-secondary-alt: hsl(220, calc(var(--saturation-factor, 1) * 7%), 17%);
-	--background-tertiary: hsl(216, calc(var(--saturation-factor, 1) * 7%), 14%);
+    --background-primary: hsl(220, calc(var(--saturation-factor, 1) * 8%), 23%);
+    --background-secondary: hsl(223, calc(var(--saturation-factor, 1) * 7%), 20%);
+    --background-secondary-alt: hsl(220, calc(var(--saturation-factor, 1) * 7%), 17%);
+    --background-tertiary: hsl(216, calc(var(--saturation-factor, 1) * 7%), 14%);
+    --background-floating: #18191c;
 }
 
 .theme-light:not(html.custom-theme-background, :has(#clientThemeVars)) {
-	--chat-background-default: #ebedef;
-	--background-modifier-accent: #06060714;
-	--background-mentioned: hsla(38, calc(var(--saturation-factor, 1) * 96%), 54%, 0.1);
-	--background-mentioned-hover: hsla(38, calc(var(--saturation-factor, 1) * 96%), 54%, 0.2);
-	--background-message-hover: rgba(6, 6, 7, 0.02);
+    --chat-background-default: #ebedef;
+    --background-modifier-accent: #06060714;
+    --background-mentioned: hsla(38, calc(var(--saturation-factor, 1) * 96%), 54%, 0.1);
+    --background-mentioned-hover: hsla(38, calc(var(--saturation-factor, 1) * 96%), 54%, 0.2);
+    --background-message-hover: rgba(6, 6, 7, 0.02);
 }
 
 body {
@@ -263,7 +265,7 @@ body {
     border-radius: var(--radius-sm);
   }
   .embedFull__623de {
-    background-color: var(--bg-mod-faint);
+    background-color: var(--background-mod-subtle) !important;
   }
   .newMessagesBar__0f481 {
     padding-left: var(--space-8);
@@ -332,5 +334,8 @@ body {
   }
   .disconnect_f1ceac {
     border-radius: 12px !important;
+  }
+  .container_fea832 {
+    background-color: var(--input-background) !important;
   }
 }
