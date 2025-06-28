@@ -1,6 +1,6 @@
 /**
   * @name BpOldCord
-  * @version 1.0.24
+  * @version 1.0.25
   * @author @milbit, @buildalible
   * @source https://github.com/BuIlDaLiBlE/BpOldCord
   * @description A theme based on OldCord that attempts to restore the feel of Discord prior to 2025 Visual Refresh
@@ -20,14 +20,12 @@
 /*@import url("https://milbits.github.io/oldcord/src/components/profile.css");*/
 
 
-.theme-dark:not(html.custom-theme-background, html:has(#clientThemeVars),.theme-darker) {
-    --background-primary: var(--background-base-low);
-    --background-secondary: var(--background-base-lower);
-    --background-secondary-alt: var(--background-base-lowest);
-    --background-tertiary: hsl(216, calc(var(--saturation-factor, 1) * 7%), 14%);
-    --background-base-low: color-mix(in oklab,var(--neutral-66) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
-    --background-base-lower: color-mix(in oklab,var(--neutral-69) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
-    --background-base-lowest: color-mix(in oklab,var(--neutral-73) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
+.theme-dark:not(html.custom-theme-background, :has(#clientThemeVars),.theme-darker,.theme-midnight) {
+    --background-base-low: color-mix(in oklab,var(--neutral-66) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%)) !important;
+    --background-base-lower: color-mix(in oklab,var(--neutral-69) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%)) !important;
+    --background-base-lowest: color-mix(in oklab,var(--neutral-73) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%)) !important;
+    --background-surface-higher: color-mix(in oklab,var(--neutral-62) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%)) !important;
+    --background-surface-highest: color-mix(in oklab,var(--neutral-60) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%)) !important;
 }
 
 .theme-light:not(html.custom-theme-background, :has(#clientThemeVars)) {
@@ -43,6 +41,9 @@ body {
 }
 
 :root {
+    --background-primary: var(--background-base-low);
+    --background-secondary: var(--background-base-lower);
+    --background-tertiary: hsl(216, calc(var(--saturation-factor, 1) * 7%), 14%);
     --custom-channel-header-height: 48px;
     --custom-member-list-width: 240px;
     --custom-guild-list-width: 72px;
@@ -344,7 +345,7 @@ body {
   .container_fea832, .container_a45028 {
     background-color: var(--input-background) !important;
   }
-  .header__45690 {
+  .container__50387, .contentWrapper__08434, .header__45690, .tooltipPrimary__382e7, .reactionTooltip_b49891 {
     background-color: var(--background-surface-high) !important;
   }
   .tertiary__06eda, .friendRequestsButton__523aa, .searchBar__35e86 .grow__201d5.fullWidth__201d5.sizeSmall__201d5.colorPrimary__201d5.lookFilled__201d5.button__201d5 {
@@ -358,5 +359,8 @@ body {
   }
   .barBase__0f481 {
     height: 32px !important;
+  }
+  .systemBar_c38106 {
+    background-color: unset !important;
   }
 }
