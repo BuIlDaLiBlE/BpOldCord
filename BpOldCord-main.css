@@ -1,6 +1,6 @@
 /**
   * @name BpOldCord
-  * @version 1.0.25
+  * @version 1.0.26
   * @author @milbit, @buildalible
   * @source https://github.com/BuIlDaLiBlE/BpOldCord
   * @description A theme based on OldCord that attempts to restore the feel of Discord prior to 2025 Visual Refresh
@@ -36,6 +36,14 @@
     --background-message-hover: rgba(6, 6, 7, 0.02);
 }
 
+.theme-dark {
+    --text-default: color-mix(in oklab,var(--neutral-9) 100%,var(--theme-text-color,#000) var(--theme-text-color-amount,0%));
+}
+
+.theme-light {
+    --text-default: color-mix(in oklab,var(--neutral-69) 100%,var(--theme-text-color,#000) var(--theme-text-color-amount,0%));
+}
+
 body {
     --blurple: var(--blurple-50);
 }
@@ -43,7 +51,7 @@ body {
 :root {
     --background-primary: var(--background-base-low);
     --background-secondary: var(--background-base-lower);
-    --background-tertiary: hsl(216, calc(var(--saturation-factor, 1) * 7%), 14%);
+    --background-tertiary: var(--background-base-lowest);
     --custom-channel-header-height: 48px;
     --custom-member-list-width: 240px;
     --custom-guild-list-width: 72px;
@@ -362,5 +370,11 @@ body {
   }
   .systemBar_c38106 {
     background-color: unset !important;
+  }
+  .hljs {
+    background: var(--background-base-lower) !important;
+  }
+  .tab_f8303a {
+    padding-bottom: 16px !important;
   }
 }
